@@ -1,21 +1,17 @@
 package com.buyzon.userservice.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
 
     @Id
+    @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String firstName;
-
     private String lastName;
-
     private String emailId;
 
     public User() {
