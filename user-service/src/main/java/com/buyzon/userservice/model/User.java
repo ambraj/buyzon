@@ -1,6 +1,7 @@
 package com.buyzon.userservice.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class User {
@@ -13,6 +14,9 @@ public class User {
     private String firstName;
     private String lastName;
     private String emailId;
+
+    @OneToMany(mappedBy = "user")
+    private List<Address> addresses;
 
     public User() {
     }
@@ -53,5 +57,13 @@ public class User {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public List<Address> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
     }
 }
