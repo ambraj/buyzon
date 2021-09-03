@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: USER-SERVICE
+  h2.console.enabled: true
 
 eureka:
   client:
