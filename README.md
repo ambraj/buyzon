@@ -1,4 +1,4 @@
-# BUYZON - Shopping 
+# BUYZON :)
 
 ### DB Schema
 ![db_schema](https://user-images.githubusercontent.com/3887992/132411664-43a4b83f-f312-487b-b1f5-4280b9b90501.png)
