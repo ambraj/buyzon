@@ -2,7 +2,7 @@
 
 Notes - 
 
-*Spring Cloud Cconfig Server :*
+### Spring Cloud Config Server
 
 * reload configuration at client service from config server
 *@RefreshScope* - this annotation enables an endpoint /refresh by which we can reload the configuration
