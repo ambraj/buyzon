@@ -4,18 +4,16 @@ import com.buyzon.userservice.model.Address;
 import com.buyzon.userservice.model.User;
 import com.buyzon.userservice.repository.AddressRepository;
 import com.buyzon.userservice.repository.UserRepository;
-import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-
-import java.util.Arrays;
-import java.util.Collections;
 
 @SpringBootApplication
 @EnableEurekaClient
+@RefreshScope
 public class UserServiceApplication implements CommandLineRunner {
 
     @Autowired

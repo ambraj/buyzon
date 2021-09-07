@@ -1,0 +1,10 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: USER-SERVICE
+  h2.console.enabled: true
+  cloud:
+    config:
+      uri: http://localhost:9011
