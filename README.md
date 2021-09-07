@@ -3,6 +3,21 @@
 ### DB Schema
 ![db_schema](https://user-images.githubusercontent.com/3887992/132411664-43a4b83f-f312-487b-b1f5-4280b9b90501.png)
 
+#### List of Microservices-
+* user-service - done
+* product-service
+* category-service
+* order-service
+* cart-service
+* discount-service
+* tag-service
+
+#### Technology Stack
+* Spring Boot
+* H2 Database(for now)
+* Docker
+* AWS
+
 ### Spring Cloud Config Server
 
 * reload configuration at client service from config server
