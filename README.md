@@ -11,7 +11,7 @@
 * cart-service
 * rating-service
 
-Covers following topics -
+*Covers following topics -*
 * service-registry EUREKA -> done
 * API-gateway
 * circuit-breaker
@@ -20,7 +20,7 @@ Covers following topics -
 * Security/Authrization
 * Load balancing
 
-#### Technology Stack
+### Technology Stack
 Backend -
 * Spring Boot
 * H2 Database(for now)
