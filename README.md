@@ -4,13 +4,21 @@
 ![db_schema](https://user-images.githubusercontent.com/3887992/132411664-43a4b83f-f312-487b-b1f5-4280b9b90501.png)
 
 #### List of Microservices-
-* user-service - done
+* user-service -> done
 * product-service
 * category-service
 * order-service
 * cart-service
-* discount-service
-* tag-service
+* rating-service
+
+Covers following topics -
+* service-registry EUREKA -> done
+* API-gateway
+* circuit-breaker
+* spring default cache
+* Exception Handling
+* Security/Authrization
+* Load balancing
 
 #### Technology Stack
 Backend -
@@ -18,6 +26,7 @@ Backend -
 * H2 Database(for now)
 * Docker
 * AWS
+* CI/CD Pipeline
 
 Frontend -
 * ReactJS
