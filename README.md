@@ -1,4 +1,4 @@
-# BUYZON
+# BUYZON - Shopping 
 
 ### DB Schema
 ![db_schema](https://user-images.githubusercontent.com/3887992/132411664-43a4b83f-f312-487b-b1f5-4280b9b90501.png)
@@ -13,10 +13,14 @@
 * tag-service
 
 #### Technology Stack
+Backend -
 * Spring Boot
 * H2 Database(for now)
 * Docker
 * AWS
+
+Frontend -
+* ReactJS
 
 ### Spring Cloud Config Server
 
