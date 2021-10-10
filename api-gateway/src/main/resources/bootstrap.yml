@@ -1,0 +1,22 @@
+server:
+  port: 9012
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    config:
+      uri: http://localhost:9011
+    gateway:
+      routes[0]:
+        id: users-fetch
+        uri: lb://USER-SERVICE
+        predicates[0]: Path=/user
+        predicates[1]: Method=GET
+        filters[0]: RemoveRequestHeader=Cookie
+        
+#    gateway:
+#      discovery:
+#        locator:
+#          enabled: true
+#          lower-case-service-id: true
