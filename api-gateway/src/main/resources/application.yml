@@ -1,0 +1,11 @@
+server:
+  port: 9012
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    config:
+      uri: http://localhost:9011
+    gateway:
+      discovery.locator.enabled: true
