@@ -2,10 +2,13 @@
 #  cloud:
 #    gateway:
 #      routes:
-#      - id: users-fetch
-#        uri: lb://USER-SERVICE
-#        predicates:
-#        - Path=/user
+#        - id: users-fetch
+#          uri: lb://USER-SERVICE
+#          predicates:
+#            - Path=/user
+#            - Method=GET
+#          filters:
+#            - RemoveRequestHeader=Cookie
 #
 ##    gateway:
 ##      discovery:
