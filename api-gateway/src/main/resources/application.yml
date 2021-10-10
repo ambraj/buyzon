@@ -1,11 +1,14 @@
-server:
-  port: 9012
-
-spring:
-  application:
-    name: API-GATEWAY
-  cloud:
-    config:
-      uri: http://localhost:9011
-    gateway:
-      discovery.locator.enabled: true
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: users-fetch
+#        uri: lb://USER-SERVICE
+#        predicates:
+#        - Path=/user
+#
+##    gateway:
+##      discovery:
+##        locator:
+##          enabled: true
+##          lower-case-service-id: true

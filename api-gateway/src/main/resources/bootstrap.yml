@@ -8,13 +8,15 @@ spring:
     config:
       uri: http://localhost:9011
     gateway:
-      routes[0]:
-        id: users-fetch
-        uri: lb://USER-SERVICE
-        predicates[0]: Path=/user
-        predicates[1]: Method=GET
-        filters[0]: RemoveRequestHeader=Cookie
-        
+      routes:
+        - id: users-fetch
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user
+            - Method=GET
+          filters:
+            - RemoveRequestHeader=Cookie
+
 #    gateway:
 #      discovery:
 #        locator:
