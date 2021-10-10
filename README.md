@@ -17,7 +17,7 @@
 * circuit-breaker
 * spring default cache
 * Exception Handling
-* Security/Authrization
+* Security/Authorization
 * Load balancing
 
 ### Technology Stack
