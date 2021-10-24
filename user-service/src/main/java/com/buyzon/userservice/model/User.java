@@ -9,9 +9,11 @@ import javax.validation.constraints.Size;
 public class User {
 
     @Id
-    @Column(name = "user_id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+
+    private String userId;
 
     @NotNull(message = "First name cannot be null")
     @Size(min = 2, message = "First name must not be less than 2 characters")
@@ -45,6 +47,14 @@ public class User {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getFirstName() {

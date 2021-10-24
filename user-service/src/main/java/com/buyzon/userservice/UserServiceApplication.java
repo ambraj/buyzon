@@ -1,13 +1,15 @@
 package com.buyzon.userservice;
 
 import com.buyzon.userservice.model.User;
-import com.buyzon.userservice.repository.UserRepository;
+import com.buyzon.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -15,7 +17,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class UserServiceApplication implements CommandLineRunner {
 
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
     public static void main(String[] args) {
         SpringApplication.run(UserServiceApplication.class, args);
@@ -27,7 +29,12 @@ public class UserServiceApplication implements CommandLineRunner {
         User user1 = new User("Lucy", "Shawn", "234", "lucy@gmail.com");
         User user2 = new User("John", "Wick", "543", "john@gmail.com");
 
-        userRepository.save(user1);
-        userRepository.save(user2);
+        userService.createUser(user1);
+        userService.createUser(user2);
+    }
+
+    @Bean
+    public BCryptPasswordEncoder getPasswordEncoder(){
+        return new BCryptPasswordEncoder();
     }
 }
