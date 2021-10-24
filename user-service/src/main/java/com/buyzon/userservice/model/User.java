@@ -4,7 +4,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.List;
 
 @Entity
 public class User {
@@ -22,20 +21,22 @@ public class User {
     @Size(min = 2, message = "Last name must not be less than 2 characters")
     private String lastName;
 
+    @NotNull(message = "Password cannot be null")
+    @Size(min = 2, message = "Password must not be less than 2 characters")
+    private String password;
+
     @NotNull(message = "Email cannot be null")
     @Email
-    private String emailId;
-
-    @OneToMany(mappedBy = "user")
-    private List<Address> addresses;
+    private String email;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String emailId) {
+    public User(String firstName, String lastName, String password, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.emailId = emailId;
+        this.password = password;
+        this.email = email;
     }
 
     public Long getId() {
@@ -62,19 +63,19 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public List<Address> getAddresses() {
-        return addresses;
+    public String getPassword() {
+        return password;
     }
 
-    public void setAddresses(List<Address> addresses) {
-        this.addresses = addresses;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
